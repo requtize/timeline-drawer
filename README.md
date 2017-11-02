@@ -94,6 +94,10 @@ Script watches if window resizes, but in special cases You can force refresh siz
 drawer.refreshCanvasSize();
 ```
 
+# requtize/code-timer Integration
+
+Integration with [requtize/code-timer](https://github.com/requtize/code-timer).
+
 # Licence
 
 This code is licensed under MIT License.
