@@ -20,10 +20,8 @@ The data object contains informations about total duration time of timeline, sec
 
 ```js
 {
-    totalTime: {
-        // Total execution time. The timeline will take this value as max chart time value.
-        duration: 100
-    },
+    // Total execution time. The timeline will take this value as max chart time value.
+    duration: 100,
     // Array with sections. Sections are groups of elements. The sections contains stops.
     sections: [
         {

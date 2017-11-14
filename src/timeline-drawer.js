@@ -61,9 +61,7 @@
                 return data;
 
             let newData  = {
-                totalTime: {
-                    duration: data.totalTime.duration
-                },
+                duration: data.duration,
                 sections: [],
                 stops   : []
             };
@@ -159,9 +157,7 @@
 
         this.normalizeFromRequtizeTimer = function (data) {
             let result = {
-                totalTime: {
-                    duration: getFromObject(data, 'total-time.duration') * 1000
-                },
+                duration: getFromObject(data, 'total-time.duration') * 1000,
                 sections: [],
                 stops   : []
             };
@@ -302,7 +298,7 @@
         };
 
         this.createElement = function (source, type, offset) {
-            let totalDuration = this.data.totalTime.duration;
+            let totalDuration = this.data.duration;
             let lines = this.createElementLines(source.periods);
             let elm   = new Element(lines);
 
@@ -337,7 +333,7 @@
         };
 
         this.createElementLines = function (periods) {
-            let totalDuration = this.data.totalTime.duration;
+            let totalDuration = this.data.duration;
             let lines = [];
 
             for(let i = 0; i < periods.length; i++)
@@ -353,7 +349,7 @@
         };
 
         this.positionateElementLines = function (element) {
-            let totalDuration = this.data.totalTime.duration;
+            let totalDuration = this.data.duration;
 
             for(let i = 0; i < element.lines.length; i++)
             {
